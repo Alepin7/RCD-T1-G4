@@ -9,6 +9,7 @@ import javax.jws.WebMethod;
 import javax.jws.WebParam;
 
 import Clases.Validar_DV;
+import Clases.Full_name;
 
 /**
  *
@@ -36,5 +37,23 @@ public class Funciones {
 		}
 			
 	}
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "Recibir_nombre")
+    public String Recibir_nombre(@WebParam(name = "Nombre") String Nombre) {
+        //TODO write your implementation code here:
+        Full_name name = new Full_name(Nombre);
+        name.Split_name();
+        return name.Print_name();
+        //}return("Procedimiento \n completo");
+    }
+
+
+
+
+
+
 	
 }
