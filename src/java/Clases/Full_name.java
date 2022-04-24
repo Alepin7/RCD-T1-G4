@@ -40,7 +40,7 @@ public class Full_name {
     public String Print_name()
     {
         String fin = "";
-        fin = fin+" Nombres \n";
+        fin = fin+"Nombres \n";
         for(int i = 0;i<this.name.size();i++)
         {
             fin=fin+(String.valueOf(this.name.get(i))+"\n");
