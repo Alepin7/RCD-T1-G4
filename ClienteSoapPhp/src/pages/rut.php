@@ -10,12 +10,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
    
-    <title>Web Services Soap</title>
+    <title>Web Service Soap</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-info sticky-top p-3 aria-label">
         <div class="container">
-            <a class="navbar-brand" href="../../index.php" style="color: white;">Web Services SOAP</a>
+            <a class="navbar-brand" href="../../index.php" style="color: white;">Web Service SOAP</a>
             <button class="navbar-toggler border-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <ion-icon name="menu-outline"></ion-icon>
             </button>
