@@ -1,6 +1,9 @@
 # RCD-T1
 Trabajo 1: Web Services SOAP/ REST
-Grupo N°4 - Integrantes : Alex Pino Moya, Vicente Gallegos Muñoz, Martin Martínez, Diego Pizarro, Felipe Jerez Alvarez.
+
+Integrantes : Alex Pino Moya, Vicente Gallegos Muñoz, Martin Martínez Allende, Diego Pizarro Soto, Felipe Jerez Alvarez.
+
+Grupo N°4 
 
 Objetivo:
 Construir un web Service SOAP y un Web Service Rest, que incluyan los 2 métodos descritos más abajo. Adicionalmente, deberá construirse un Cliente para cada uno de los 2 servicios antes solicitados. El lenguaje programación usado para construir los Servicios debe ser distinto del usado para construir los Clientes, además los lenguajes usados para construir ambos servicios, también deben ser diferentes entre sí. Como apoyo para la validación de los servicios, se sugiere utilizar alguna herramienta para consumir los servicios como SOAP UI, REST Client, u otro.
