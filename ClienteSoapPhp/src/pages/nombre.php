@@ -40,8 +40,7 @@
             <h1>Nombre Completo</h1>
             <h1 class="divider3 mx-5"></h1>
             <div class="formulario pt-5">
-            <!--<a href="src/pages/rut.php" class="btn btn-outline-light px-2 ml-1" style="text-align: center; max-width: 850px;">Verifica un rut</a>
-                    -->
+            
                 <form action="nombre.php" name="formulario1" method="POST" autocomplete="off">    
                     <?php
                         ini_set("soap.wsdl_cache_enabled", "0");
@@ -61,11 +60,15 @@
 
                         if(isset($_POST['enviar2'])){
                             $nombre_ingresado = $_POST['nombre'];
-                            if($nombre_ingresado == null || is_numeric($nombre_ingresado) == true){
+                            $imprimirnombre='Nombre ingresado: '.$nombre_ingresado;
+
+                            if($nombre_ingresado == null || is_numeric($nombre_ingresado) ){
                                 echo '<div class="mensaje">Datos ingresados incorrectamente o no hay datos ingresados !</div>';
+                                echo $imprimirnombre;
                             }
-                            else if( ctype_alpha($nombre_ingresado)== true ){
+                            else if( ctype_alpha($nombre_ingresado) ){
                                 echo '<div class="mensaje">Datos ingresados incorrectamente !</div>';
+                                echo $imprimirnombre;
                             }
                             else{
                                 $resultado = $cliente->Recibir_nombre(["Nombre" => $nombre_ingresado])->return;
@@ -73,7 +76,7 @@
 
                                         if ($largo < 3){
                                             echo '<div class="mensaje">Se debe ingresar minimo 1 nombre y 2 apellidos</div>';
-                                            echo 'Nombre ingresado: '.$nombre_ingresado;
+                                            echo $imprimirnombre;
                                             } 
                                         else{
                                             for ($i = 0; $i < $largo; $i++){
@@ -87,7 +90,7 @@
                                                     echo $constante.'Nombre '.($i+1).': '.$resultado[$i] .$constante2;    //print para nombres
                                                 }
                                             }
-                                            echo 'Nombre ingresado: '.$nombre_ingresado;
+                                            echo $imprimirnombre;
                                             
                                             }
                             }
