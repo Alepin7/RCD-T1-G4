@@ -1,4 +1,4 @@
-# RCD-T1-G4 Hola
+# RCD-T1-G4
 Trabajo 1: Web Services SOAP/ REST
 
 Integrantes : Alex Pino Moya, Vicente Gallegos Muñoz, Martin Martínez Allende, Diego Pizarro Soto, Felipe Jerez Alvarez.
