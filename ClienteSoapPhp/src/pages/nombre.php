@@ -62,11 +62,11 @@
                             $nombre_ingresado = $_POST['nombre'];
                             $imprimirnombre='Nombre ingresado: '.$nombre_ingresado;
 
-                            if($nombre_ingresado == null || is_numeric($nombre_ingresado) == true){
+                            if($nombre_ingresado == null || is_numeric($nombre_ingresado) ){
                                 echo '<div class="mensaje">Datos ingresados incorrectamente o no hay datos ingresados !</div>';
                                 echo $imprimirnombre;
                             }
-                            else if( ctype_alpha($nombre_ingresado)== true ){
+                            else if( ctype_alpha($nombre_ingresado) ){
                                 echo '<div class="mensaje">Datos ingresados incorrectamente !</div>';
                                 echo $imprimirnombre;
                             }

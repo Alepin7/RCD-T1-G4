@@ -61,11 +61,11 @@
                         if(isset($_POST['enviar'])){    
                             $rut_ingresado = $_POST['nombre'];
                     
-                           if($rut_ingresado == null || ctype_digit($rut_ingresado) == true){
+                           if($rut_ingresado == null || ctype_digit($rut_ingresado) ){
                            echo '<div class="mensaje">Datos ingresados incorrectamente o no hay datos ingresados !</div>';
                            echo $rut_ingresado;
                            }
-                           else if( ctype_alpha($rut_ingresado)== true ){
+                           else if( ctype_alpha($rut_ingresado) ){
                             echo '<div class="mensaje">Datos ingresados incorrectamente !</div>';
                             echo $rut_ingresado;
                            }
