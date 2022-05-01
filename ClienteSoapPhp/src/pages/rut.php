@@ -56,7 +56,7 @@
                         $constante = '<div class="mensaje">';        
                         $constante2 = '</div>';
 
-                        echo '<div> SUGERENCIA: Ingrese un rut separado por un " ; " de su digito verificador. Ejemplo: 11222333;4 </div>';
+                        echo '<div> SUGERENCIA: Ingrese un rut separado por un " ; " de su digito verificador. Ejemplo: 11222333-4 </div>';
                             echo 'Si existiera un error, intente nuevamente asegurandose de ingresar el rut como en el ejemplo';
 
                         if(isset($_POST['enviar'])){    
