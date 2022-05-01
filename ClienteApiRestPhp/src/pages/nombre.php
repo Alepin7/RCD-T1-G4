@@ -56,14 +56,14 @@
                         if(isset($_POST['enviar2'])){
 
                             $nombre_ingresado = $_POST['nombre'];
-
+                            $imprimirnombre = 'Nombre ingresado: '.$nombre_ingresado;
                             if($nombre_ingresado == null || is_numeric($nombre_ingresado) ){
                                 echo '<div class="mensaje">Datos ingresados incorrectamente o no hay datos ingresados !</div>';
-                                echo 'Nombre ingresado: '.$nombre_ingresado;
+                                echo $imprimirnombre;
                             }
                             else if( ctype_alpha($nombre_ingresado) ){
                                 echo '<div class="mensaje">Datos ingresados incorrectamente !</div>';
-                                echo 'Nombre ingresado: '.$nombre_ingresado;
+                                echo $imprimirnombre;
                             }
                             else{
                                 $aux1 = ' ';
