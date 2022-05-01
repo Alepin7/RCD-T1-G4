@@ -2,11 +2,10 @@ const { Router, json } = require("express")
 const router = Router();
 
 router.get('/', (req, res) => {
-    res.json({ "Titulo": "Hola Mundo" });
+    res.json({ "Titulo": "Api Rest running!" });
 });
 
-// Consumiendo Nombre
-
+// Creacion metodo nombre completo
 
 router.get('/nombre', (req, res) => {
     var nombre = req.query.nombre;
@@ -18,13 +17,11 @@ router.get('/nombre', (req, res) => {
                 aux[i] = aux[i].replace('_', ' ');
                 console.log(aux[i][j]);
             }
-
         }
     }
 
-
     if (aux.length <= 2) {
-        console.log("parametro mal ingresado :c");
+        console.log('Datos ingresados incorrectamente !');
 
     } else {
         if (aux.length >= 3) {
@@ -37,78 +34,27 @@ router.get('/nombre', (req, res) => {
         }
     }
 
-    var json = {};
-
+    var jso = {};
 
     if (aux.length <= 2) {
-        res.json('Parametro mal ingresado');
+        res.json('Datos ingresados incorrectamente !');
     } else {
         if (aux.length >= 3) {
             for (let i = 0, j = 1; i < (aux.length) - 2; i++, j++) {
-                json['Nombre ' + j] = aux[i];
+                jso['Nombre ' + j] = aux[i];
 
             }
-            json['Apellido Paterno'] = aux[aux.length - 2];
-            json['Apellido Materno'] = aux[aux.length - 1];
+            jso['Apellido Paterno'] = aux[aux.length - 2];
+            jso['Apellido Materno'] = aux[aux.length - 1];
         }
 
-        res.json(json);
-    }
-
-
-
-
-})
-
-
-// funcion de calculo de digito verificador // cambiar esto
-/*
-router.get('/rut', (req, res) => {
-    var rutdv = req.query.rut;
-    var aux = 0,
-        multi = 2,
-        largo = 0,
-        suman = 0;
-    aux = rutdv;
-    largo = (aux.toString().length);
-    console.log("largo:", largo);
-    for (let i = 0; i < largo; i++) {
-        if (multi == 8)
-            multi = 2;
-        suman += multi * (aux % 10);
-        aux /= 10;
-        aux = Math.trunc(aux);
-        multi++;
-    }
-    console.log(suman);
-    var explo = suman / 11;
-    console.log(explo);
-    explo = Math.trunc(explo);
-    console.log(explo);
-    explo *= 11;
-    console.log(explo);
-    explo = suman - explo;
-    console.log(suman);
-    suman = 11 - explo;
-    console.log(suman);
-    if (suman == 10) {
-        suman = 'k';
-        res.json({ "rut": rutdv + "-" + suman });
-
-
-    } else if (suman == 11) {
-        suman = 0;
-        res.json({ "rut": rutdv + "-" + suman });
-
-
-    } else {
-        res.json({ "rut": rutdv + "-" + suman });
+        res.json(jso);
     }
 
 
 })
 
-*/
+// Creacion metodo validar dv
 
 router.get('/rut', (req, res) => {
 
@@ -119,13 +65,15 @@ router.get('/rut', (req, res) => {
        var aux = 0,
            multi = 2,
            largo = 0,
-           suman = 0;
+           suman = 0,
+           sumanM = 0;
        aux = datos[0];
        largo = (aux.toString().length);
        console.log("largo:", largo);
        for (let i = 0; i < largo; i++) {
-           if (multi == 8)
+           if (multi == 8){
                multi = 2;
+            }
            suman += multi * (aux % 10);
            aux /= 10;
            aux = Math.trunc(aux);
@@ -141,22 +89,24 @@ router.get('/rut', (req, res) => {
        explo = suman - explo;
        console.log(suman);
        suman = 11 - explo;
+       sumanM= suman;
        console.log(suman);
-       if (suman == 10) {
+       if (suman == 10 || sumanM == 10) {
            suman = 'k';
-           if (suman == datos[1]){
-               res.json("el digito verificador es correcto");
-           if (suman != datos[1])
-               res.json("el digito verificador es inorrecto");
+           sumanM = 'K';
+           if (suman == datos[1] || sumanM == datos[1]){
+               res.json("El Digito Verificador es Valido");
+           if (suman != datos[1] || sumanM != datos[1])
+               res.json("El Digito Verificador es Incorrecto");
            }
    
    
        } else if (suman == 11) {
            suman = 0;
            if (suman == datos[1]){
-               res.json("el digito verificador es correcto");
+               res.json("El Digito Verificador es Valido");
            if (suman != datos[1])
-               res.json("el digito verificador es inorrecto");
+               res.json("El Digito Verificador es Incorrecto");
            }
        }
        if (suman == datos[1]) {
@@ -167,5 +117,7 @@ router.get('/rut', (req, res) => {
             }
 
 })
+
+
 
 module.exports = router;
