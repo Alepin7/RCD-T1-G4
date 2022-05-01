@@ -17,10 +17,8 @@ router.get('/nombre', (req, res) => {
                 aux[i] = aux[i].replace('_', ' ');
                 console.log(aux[i][j]);
             }
-
         }
     }
-
 
     if (aux.length <= 2) {
         console.log('Datos ingresados incorrectamente !');
@@ -36,25 +34,22 @@ router.get('/nombre', (req, res) => {
         }
     }
 
-    var json = {};
-
+    var jso = {};
 
     if (aux.length <= 2) {
         res.json('Datos ingresados incorrectamente !');
     } else {
         if (aux.length >= 3) {
             for (let i = 0, j = 1; i < (aux.length) - 2; i++, j++) {
-                json['Nombre ' + j] = aux[i];
+                jso['Nombre ' + j] = aux[i];
 
             }
-            json['Apellido Paterno'] = aux[aux.length - 2];
-            json['Apellido Materno'] = aux[aux.length - 1];
+            jso['Apellido Paterno'] = aux[aux.length - 2];
+            jso['Apellido Materno'] = aux[aux.length - 1];
         }
 
-        res.json(json);
+        res.json(jso);
     }
-
-
 
 
 })
@@ -70,14 +65,15 @@ router.get('/rut', (req, res) => {
        var aux = 0,
            multi = 2,
            largo = 0,
-           suman = 0;
+           suman = 0,
            sumanM = 0;
        aux = datos[0];
        largo = (aux.toString().length);
        console.log("largo:", largo);
        for (let i = 0; i < largo; i++) {
-           if (multi == 8)
+           if (multi == 8){
                multi = 2;
+            }
            suman += multi * (aux % 10);
            aux /= 10;
            aux = Math.trunc(aux);
