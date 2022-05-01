@@ -84,7 +84,7 @@
                                                 echo $constante .'Apellido Paterno: ' .$resultado[$i] .$constante2;//print para primer apellid
                                                 }
                                                 else{
-                                                    echo $constante.'Nombre: ' .$resultado[$i] .$constante2;    //print para nombres
+                                                    echo $constante.'Nombre '.($i+1).': '.$resultado[$i] .$constante2;    //print para nombres
                                                 }
                                             }
                                             echo 'Nombre ingresado: '.$nombre_ingresado;
