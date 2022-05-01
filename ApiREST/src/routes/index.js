@@ -51,7 +51,6 @@ router.get('/nombre', (req, res) => {
         res.json(jso);
     }
 
-
 })
 
 // Creacion metodo validar dv
@@ -99,7 +98,6 @@ router.get('/rut', (req, res) => {
            if (suman != datos[1] || sumanM != datos[1])
                res.json("El Digito Verificador es Incorrecto");
            }
-   
    
        } else if (suman == 11) {
            suman = 0;
