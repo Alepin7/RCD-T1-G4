@@ -2,7 +2,7 @@ sonar.projectKey=ClienteApiRestPhp
 
 
 sonar.projectName=ClienteApiRestPhp
-sonar.projectVersion=2.0   
+sonar.projectVersion=1.0   
 #Configure here general information about the environment, such as SonarQube server connection details for example
 #No information about specific project should appear here
 

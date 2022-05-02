@@ -1,6 +1,6 @@
 projectKey=ClienteSoapPhp
 serverUrl=http://localhost:9000
-serverVersion=8.3.1.34397
+serverVersion=8.9.8.54436
 dashboardUrl=http://localhost:9000/dashboard?id=ClienteSoapPhp
-ceTaskId=AYCB3WUVll2dNakHEWXh
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AYCB3WUVll2dNakHEWXh
+ceTaskId=AYCFlDufa8-9ynrpyEdd
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYCFlDufa8-9ynrpyEdd

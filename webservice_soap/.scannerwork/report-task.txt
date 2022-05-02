@@ -1,6 +1,6 @@
 projectKey=webservice_soap
 serverUrl=http://localhost:9000
-serverVersion=8.3.1.34397
+serverVersion=8.9.8.54436
 dashboardUrl=http://localhost:9000/dashboard?id=webservice_soap
-ceTaskId=AYCCwc1Ull2dNakHEWXs
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AYCCwc1Ull2dNakHEWXs
+ceTaskId=AYCFlbDia8-9ynrpyEdp
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYCFlbDia8-9ynrpyEdp
