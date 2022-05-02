@@ -46,7 +46,6 @@ public class Funciones {
 	    //TODO write your implementation code here:
 	    String[] nombrecompleto = Nombre.split(" ");
 	    return nombrecompleto;
-	    //}return("Procedimiento \n completo");
     }
 
 

@@ -11,6 +11,9 @@ sonar.projectVersion=1.0
 
 #----- Default source code encoding
 #sonar.sourceEncoding=UTF-8
-sonar.sources=C:/Users/Martín/Documents/RCD-T1-G4-main/webservice_soap/src/java
+sonar.sources=.
 sonar.lenguage = java
-sonar.java.binaries = C:/Users/Martín/Documents/RCD-T1-G4-main/webservice_soap/build/web/WEB-INF/classes
+sonar.java.binaries =.
+
+#C:\Users\Martín\Documents\RCD-T1-G4-main\webservice_soap\src\java
+#C:\Users\Martín\Documents\RCD-T1-G4-main\webservice_soap\build\web\WEB-INF\classes
