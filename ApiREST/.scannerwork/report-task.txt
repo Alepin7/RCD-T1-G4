@@ -1,0 +1,6 @@
+projectKey=ApiREST
+serverUrl=http://localhost:9000
+serverVersion=8.3.1.34397
+dashboardUrl=http://localhost:9000/dashboard?id=ApiREST
+ceTaskId=AYCB_p4Xll2dNakHEWXj
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYCB_p4Xll2dNakHEWXj

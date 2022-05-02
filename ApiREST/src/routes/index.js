@@ -51,6 +51,10 @@ router.get('/nombre', (req, res) => {
         res.json(jso);
     }
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 })
 
 // Creacion metodo validar dv
@@ -99,6 +103,10 @@ router.get('/rut', (req, res) => {
                res.json("El Digito Verificador es Incorrecto");
            }
    
+<<<<<<< Updated upstream
+=======
+   
+>>>>>>> Stashed changes
        } else if (suman == 11) {
            suman = 0;
            if (suman == datos[1]){
